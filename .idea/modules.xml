@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Sunshine/app/src/main/main.iml" filepath="$PROJECT_DIR$/Sunshine/app/src/main/main.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Sunshine.iml" filepath="$PROJECT_DIR$/Sunshine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+>>>>>>> e8f4e7ce854ae8b58a262e6e51baed0d03b1abc8
     </modules>
   </component>
 </project>
