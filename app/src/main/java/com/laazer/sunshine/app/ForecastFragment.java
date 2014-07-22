@@ -37,11 +37,21 @@ public class ForecastFragment extends Fragment {
 
         return rootView;
     }
-    public class FetchWeatherTask extends AsyncTask {
+    public class FetchWeatherTask extends AsyncTask<String, Integer, String> {
 
         @Override
-        protected Object doInBackground(Object[] objects) {
+        protected String doInBackground(String[] objects) {
             return HttpHelper.httpGet("http://api.openweathermap.org/data/2.5/forecast/daily?q=94043&mode=json&units=metric&cnt=7");
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... progress) {
+            setProgressPercent(progress[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            showDialog("Downloaded " + result + " bytes");
         }
     }
 }
