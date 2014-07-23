@@ -71,6 +71,7 @@ public class HttpHelper {
                     }
                 }
             }
+            Log.v("HTTPReturn", jsonStr);
             return jsonStr;
         }
     
