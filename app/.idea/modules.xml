@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:///Library/android-sdk-macosx/extras/android/support/v7/appcompat/appcompat.iml" filepath="/Library/android-sdk-macosx/extras/android/support/v7/appcompat/appcompat.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Sunshine.iml" filepath="$PROJECT_DIR$/../Sunshine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" />
+      <module fileurl="file:///Library/android-sdk-macosx/tools/templates/templates.iml" filepath="/Library/android-sdk-macosx/tools/templates/templates.iml" />
     </modules>
   </component>
 </project>

@@ -1,13 +1,16 @@
 package com.laazer.sunshine.app;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.*;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,6 +47,17 @@ public class ForecastFragment extends Fragment {
         mForecastAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forcast,
                 R.id.list_item_forecast_textview, weekForecast);
         listView.setAdapter(mForecastAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Context context = view.getContext();
+                CharSequence text = adapterView.getAdapter().getItem(i).toString();
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+        });
         return rootView;
     }
 

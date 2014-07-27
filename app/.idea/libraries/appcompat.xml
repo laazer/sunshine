@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="appcompat">
-    <CLASSES />
-    <JAVADOC />
-    <SOURCES>
-      <root url="file:///Library/android-sdk-macosx/extras/android/support/v7/appcompat" />
-    </SOURCES>
-  </library>
-</component>
