@@ -15,10 +15,7 @@ import org.json.JSONObject;
 import java.lang.Override;
 import java.lang.Void;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -28,23 +25,25 @@ public class ForecastFragment extends Fragment {
     public ForecastFragment() {
     }
 
+    ArrayAdapter<String> mForecastAdapter;
+
     @Override
     public void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setHasOptionsMenu(true);
     }
 
-    private List<String> fakeData =  new ArrayList<String>(Arrays.asList(new String[]{"Today-Sunny-88/63", "Tomorrow-Sunny-88/63",
-            "Tues-Sunny-88/63", "Wed-Sunny-88/63", "Thur-Sunny-88/63", "Fri-Sunny-88/63",
-            "Sat-Sunny-88/63"}));
-    private ArrayAdapter<String> forecastAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forcast,
-            R.id.list_item_forecast_textview, fakeData);
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        List<String> weekForecast =  new ArrayList<String>(Arrays.asList(new String[]{"Today-Sunny-88/63", "Tomorrow-Sunny-88/63",
+                "Tues-Sunny-88/63", "Wed-Sunny-88/63", "Thur-Sunny-88/63", "Fri-Sunny-88/63",
+                "Sat-Sunny-88/63"}));
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
-        listView.setAdapter(forecastAdapter);
+        mForecastAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forcast,
+                R.id.list_item_forecast_textview, weekForecast);
+        listView.setAdapter(mForecastAdapter);
         return rootView;
     }
 
@@ -165,8 +164,6 @@ public class ForecastFragment extends Fragment {
             }
 
         }
-
-        ArrayAdapter<String> mForecastAdapter;
 
         @Override
         protected void onPostExecute(String[] result) {
