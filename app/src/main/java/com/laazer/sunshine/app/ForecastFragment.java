@@ -2,6 +2,9 @@ package com.laazer.sunshine.app;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.EditTextPreference;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -15,11 +18,11 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.lang.Override;
 import java.lang.Void;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.prefs.PreferenceChangeEvent;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -70,7 +73,9 @@ public class ForecastFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.refresh) {
-            new FetchWeatherTask().execute("01760");
+            SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
+            new FetchWeatherTask().execute(zipPref);
             return true;
         }
         return super.onOptionsItemSelected(item);

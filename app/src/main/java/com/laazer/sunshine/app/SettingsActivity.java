@@ -1,12 +1,9 @@
 package com.laazer.sunshine.app;
 
-import android.preference.ListPreference;
+import android.preference.*;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.widget.Button;
 
@@ -20,6 +17,8 @@ import android.widget.Button;
  */
 public class SettingsActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
+
+    public static final String KEY_UNIT_PREF = "pref_pick_unit_key";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
