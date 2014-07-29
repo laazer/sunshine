@@ -55,6 +55,7 @@ public class ForecastFragment extends Fragment {
                 CharSequence text = adapterView.getAdapter().getItem(i).toString();
                 Intent detailIntent = new Intent(context, DetailActivity.class);
                 detailIntent.putExtra("forecast", text);
+                startActivity(detailIntent);
             }
         });
         return rootView;
