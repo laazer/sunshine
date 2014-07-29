@@ -1,5 +1,6 @@
 package com.laazer.sunshine.app;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,6 +33,8 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+            Intent settingIntent = new Intent(this.getApplicationContext(), SettingsActivity.class);
+            startActivity(settingIntent);
             return true;
         }
         return super.onOptionsItemSelected(item);
