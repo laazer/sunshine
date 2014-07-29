@@ -1,6 +1,7 @@
 package com.laazer.sunshine.app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -52,10 +53,8 @@ public class ForecastFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Context context = view.getContext();
                 CharSequence text = adapterView.getAdapter().getItem(i).toString();
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+                Intent detailIntent = new Intent(context, DetailActivity.class);
+                detailIntent.putExtra("forecast", text);
             }
         });
         return rootView;
