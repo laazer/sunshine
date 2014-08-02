@@ -18,7 +18,6 @@ import android.widget.Button;
 public class SettingsActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
 
-    public static final String KEY_UNIT_PREF = "pref_pick_unit_key";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

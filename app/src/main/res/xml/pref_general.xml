@@ -33,9 +33,9 @@
         <ListPreference
             android:key="@string/pref_pick_unit_key"
             android:title="@string/pref_pick_unit_title"
-            android:defaultValue="-1"
-            android:entries="@array/pref_example_list_titles"
-            android:entryValues="@array/pref_example_list_values"
+            android:defaultValue="Fahrenheit"
+            android:entries="@array/pref_temp_list_titles"
+            android:entryValues="@array/pref_temp_list_values"
             android:negativeButtonText="@null"
             android:positiveButtonText="@null" />
     </PreferenceCategory>

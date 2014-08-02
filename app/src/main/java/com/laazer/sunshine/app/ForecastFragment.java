@@ -75,7 +75,8 @@ public class ForecastFragment extends Fragment {
         if(id == R.id.refresh) {
             SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
             String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
-            new FetchWeatherTask().execute(zipPref);
+            String unit = textPreference.getString(getString(R.string.pref_pick_unit_key), "imperial");
+            new FetchWeatherTask().execute(zipPref, unit);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -83,13 +84,13 @@ public class ForecastFragment extends Fragment {
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
-        private String getForecastString(String param) {
+        private String getForecastString(String param, String unit) {
             final String BASE_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?";
             final String QUERY_PARAM = "q";
             final String UNITS_PARAM = "units";
             final String DAYS_PARAM = "cnt";
             Uri builtUri = Uri.parse(BASE_URL).buildUpon().appendQueryParameter(QUERY_PARAM, param).
-                    appendQueryParameter(UNITS_PARAM, "metric").appendQueryParameter(DAYS_PARAM, Integer.toString(7)).build();
+                    appendQueryParameter(UNITS_PARAM, unit).appendQueryParameter(DAYS_PARAM, Integer.toString(7)).build();
             String result =  HttpHelper.httpGet(builtUri.toString());
             Log.v("Built url", result);
             return result;
@@ -176,7 +177,7 @@ public class ForecastFragment extends Fragment {
         @Override
         protected String[] doInBackground(String... params) {
             try {
-                return getWeatherDataFromJson(getForecastString(params[0]), 7);
+                return getWeatherDataFromJson(getForecastString(params[0], params[1]), 7);
             }catch (JSONException e) {
                 Log.e("getForecast", e.toString());
                 return null;
