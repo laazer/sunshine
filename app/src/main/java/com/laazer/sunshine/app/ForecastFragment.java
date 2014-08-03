@@ -22,7 +22,6 @@ import java.lang.Override;
 import java.lang.Void;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.prefs.PreferenceChangeEvent;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -79,7 +78,20 @@ public class ForecastFragment extends Fragment {
             new FetchWeatherTask().execute(zipPref, unit);
             return true;
         }
+        if (id == R.id.view_location) {
+            SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
+            showMap(Uri.parse("geo:0,0?").buildUpon().appendQueryParameter("q", zipPref).build());
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showMap(Uri geoLocation) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(geoLocation);
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
