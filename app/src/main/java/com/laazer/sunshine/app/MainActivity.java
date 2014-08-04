@@ -3,6 +3,7 @@ package com.laazer.sunshine.app;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,6 +13,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.v("Create", "On create call");
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new ForecastFragment()).commit();
@@ -38,6 +40,36 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.v("Start", "On start call");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.v("Stop", "On stop call");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.v("Pause", "On pause call");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.v("Resume", "On resume call");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.v("Destroy", "On destroy call");
     }
 
 

@@ -40,10 +40,11 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //Fake data for ArrayAdapter
-        List<String> weekForecast =  new ArrayList<String>(Arrays.asList(new String[]{"Today-Sunny-88/63", "Tomorrow-Sunny-88/63",
+        //Fake data for ArrayAdapter for testing
+        List<String> fakeForecast =  new ArrayList<String>(Arrays.asList(new String[]{"Today-Sunny-88/63", "Tomorrow-Sunny-88/63",
                 "Tues-Sunny-88/63", "Wed-Sunny-88/63", "Thur-Sunny-88/63", "Fri-Sunny-88/63",
                 "Sat-Sunny-88/63"}));
+        List<String> weekForecast = new ArrayList<String>();
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         //set ArrayAdapter
@@ -75,7 +76,7 @@ public class ForecastFragment extends Fragment {
     private void getAndSetZip() {
         SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
         //set zip code
-        String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
+        String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "90210");
         //set units
         String unit = textPreference.getString(getString(R.string.pref_pick_unit_key), "imperial");
         new FetchWeatherTask().execute(zipPref, unit);

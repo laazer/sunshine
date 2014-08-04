@@ -16,7 +16,7 @@
                 android:key="@string/pref_zip_code_entry_key"
                 android:title="@string/pref_zip_code_entry_title"
                 android:hint="@string/pref_enter_zip_code"
-                android:defaultValue="02115"
+                android:defaultValue="90210"
                 android:selectAllOnFocus="true"
                 android:inputType="number"
                 android:singleLine="true"
