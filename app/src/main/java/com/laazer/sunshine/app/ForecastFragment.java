@@ -60,6 +60,7 @@ public class ForecastFragment extends Fragment {
                 startActivity(detailIntent);
             }
         });
+        getAndSetZip();
         return rootView;
     }
 
@@ -68,16 +69,23 @@ public class ForecastFragment extends Fragment {
         inflater.inflate(R.menu.forcastfragment, menu);
     }
 
+    /**
+     * Retrieves the zip code from settings and then sets the zip code.
+     */
+    private void getAndSetZip() {
+        SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        //set zip code
+        String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
+        //set units
+        String unit = textPreference.getString(getString(R.string.pref_pick_unit_key), "imperial");
+        new FetchWeatherTask().execute(zipPref, unit);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.refresh) {
-            SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            //set zip code
-            String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
-            //set units
-            String unit = textPreference.getString(getString(R.string.pref_pick_unit_key), "imperial");
-            new FetchWeatherTask().execute(zipPref, unit);
+            getAndSetZip();
             return true;
         }
         if (id == R.id.view_location) {
