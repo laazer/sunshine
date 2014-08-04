@@ -3,7 +3,6 @@ package com.laazer.sunshine.app;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.EditTextPreference;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.net.Uri;
@@ -14,7 +13,6 @@ import android.view.*;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
- * A placeholder fragment containing a simple view.
+ * A placeholder fragment containing a the 7 Day Forecast
  */
 public class ForecastFragment extends Fragment {
 
@@ -42,11 +40,13 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //Fake data for ArrayAdapter
         List<String> weekForecast =  new ArrayList<String>(Arrays.asList(new String[]{"Today-Sunny-88/63", "Tomorrow-Sunny-88/63",
                 "Tues-Sunny-88/63", "Wed-Sunny-88/63", "Thur-Sunny-88/63", "Fri-Sunny-88/63",
                 "Sat-Sunny-88/63"}));
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
+        //set ArrayAdapter
         mForecastAdapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forcast,
                 R.id.list_item_forecast_textview, weekForecast);
         listView.setAdapter(mForecastAdapter);
@@ -73,19 +73,23 @@ public class ForecastFragment extends Fragment {
         int id = item.getItemId();
         if(id == R.id.refresh) {
             SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            //set zip code
             String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
+            //set units
             String unit = textPreference.getString(getString(R.string.pref_pick_unit_key), "imperial");
             new FetchWeatherTask().execute(zipPref, unit);
             return true;
         }
         if (id == R.id.view_location) {
             SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            //get zip code for map call
             String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "02115");
             showMap(Uri.parse("geo:0,0?").buildUpon().appendQueryParameter("q", zipPref).build());
         }
         return super.onOptionsItemSelected(item);
     }
 
+    //Start explicit intent to display location
     private void showMap(Uri geoLocation) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(geoLocation);
@@ -96,6 +100,7 @@ public class ForecastFragment extends Fragment {
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
+        //generate API call String
         private String getForecastString(String param, String unit) {
             final String BASE_URL = "http://api.openweathermap.org/data/2.5/forecast/daily?";
             final String QUERY_PARAM = "q";
