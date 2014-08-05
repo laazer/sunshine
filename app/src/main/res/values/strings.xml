@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="refresh" translatable="false">Refresh</string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="view_location">View Location</string>
 
 </resources>
