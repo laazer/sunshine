@@ -5,23 +5,19 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
 import android.util.Log;
-import com.laazer.sunshine.app.data.WeatherDbHelper;
 import com.laazer.sunshine.app.data.WeatherContract.LocationEntry;
 import com.laazer.sunshine.app.data.WeatherContract.WeatherEntry;
+import com.laazer.sunshine.app.data.WeatherDbHelper;
 
 import java.util.Map;
 import java.util.Set;
 
-public class TestDb extends AndroidTestCase {
+public class TestProvider extends AndroidTestCase {
 
-    public static final String LOG_TAG = TestDb.class.getSimpleName();
+    public static final String LOG_TAG = TestProvider.class.getSimpleName();
 
-    public void testCreateDb() throws Throwable {
+    public void textDeleteDb() throws Throwable {
         mContext.deleteDatabase(WeatherDbHelper.DATABASE_NAME);
-        SQLiteDatabase db = new WeatherDbHelper(
-                this.mContext).getWritableDatabase();
-        assertEquals(true, db.isOpen());
-        db.close();
     }
 
     public void testInsertReadDb() {
