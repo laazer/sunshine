@@ -38,7 +38,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac0d3f4-dcd8-485b-9cd0-87c82f06b5eb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java" afterPath="$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java" afterPath="$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" />
     </list>
@@ -121,28 +120,16 @@
       <file leaf-file-name="WeatherProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="3120">
-              <caret line="93" column="82" selection-start-line="93" selection-start-column="82" selection-end-line="93" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1314" max-vertical-offset="3420">
+              <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6284#6285#0" expanded="true" />
-                <element signature="e#6311#6312#0" expanded="true" />
-                <element signature="e#6401#6402#0" expanded="true" />
-                <element signature="e#6425#6426#0" expanded="true" />
-                <element signature="e#6537#6538#0" expanded="true" />
-                <element signature="e#6561#6562#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDb.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="1935">
-              <caret line="85" column="51" selection-start-line="85" selection-start-column="51" selection-end-line="85" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#7233#7234#0" expanded="true" />
+                <element signature="e#7260#7261#0" expanded="true" />
+                <element signature="e#7350#7351#0" expanded="true" />
+                <element signature="e#7374#7375#0" expanded="true" />
+                <element signature="e#7486#7487#0" expanded="true" />
+                <element signature="e#7510#7511#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,11 +138,22 @@
       <file leaf-file-name="TestProvider.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4023256" vertical-offset="783" max-vertical-offset="2340">
-              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.032894738" vertical-offset="1560" max-vertical-offset="2475">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding>
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDb.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="1935">
+              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -932,8 +930,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherDbHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherContract.java" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" />
         <option value="$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" />
         <option value="$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java" />
       </list>
     </option>
@@ -1698,7 +1696,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1722,7 +1720,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31796876" sideWeight="0.49676025" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31796876" sideWeight="0.49676025" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32669324" sideWeight="0.58562195" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2238,39 +2236,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="3120">
-          <caret line="93" column="82" selection-start-line="93" selection-start-column="82" selection-end-line="93" selection-end-column="82" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="1935">
+          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6284#6285#0" expanded="true" />
-            <element signature="e#6311#6312#0" expanded="true" />
-            <element signature="e#6401#6402#0" expanded="true" />
-            <element signature="e#6425#6426#0" expanded="true" />
-            <element signature="e#6537#6538#0" expanded="true" />
-            <element signature="e#6561#6562#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1123" max-vertical-offset="1935">
-          <caret line="85" column="51" selection-start-line="85" selection-start-column="51" selection-end-line="85" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1314" max-vertical-offset="3420">
+          <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#7233#7234#0" expanded="true" />
+            <element signature="e#7260#7261#0" expanded="true" />
+            <element signature="e#7350#7351#0" expanded="true" />
+            <element signature="e#7374#7375#0" expanded="true" />
+            <element signature="e#7486#7487#0" expanded="true" />
+            <element signature="e#7510#7511#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4023256" vertical-offset="783" max-vertical-offset="2340">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.032894738" vertical-offset="1560" max-vertical-offset="2475">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding>
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
