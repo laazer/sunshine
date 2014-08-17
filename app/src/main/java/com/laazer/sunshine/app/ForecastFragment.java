@@ -61,7 +61,7 @@ public class ForecastFragment extends Fragment {
                 startActivity(detailIntent);
             }
         });
-        getAndSetZip();
+        updateWeather();
         return rootView;
     }
 
@@ -72,22 +72,18 @@ public class ForecastFragment extends Fragment {
     }
 
     /**
-     * Retrieves the zip code from settings and then sets the zip code.
+     * Retreives the updated weather from the db
      */
-    private void getAndSetZip() {
-        SharedPreferences textPreference = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        //set zip code
-        String zipPref = textPreference.getString(getString(R.string.pref_zip_code_entry_key), "90210");
-        //set units
-        String unit = textPreference.getString(getString(R.string.pref_pick_unit_key), "imperial");
-        new FetchWeatherTask().execute(zipPref, unit);
+    private void updateWeather() {
+        String location = Utility.getPreferredLocation(getActivity());
+        new FetchWeatherTask(getActivity(), mForecastAdapter).execute(location);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.refresh) {
-            getAndSetZip();
+            updateWeather();
             return true;
         }
         if (id == R.id.view_location) {
