@@ -326,4 +326,5 @@ public class TestProvider extends AndroidTestCase {
 
         TestDb.validateCursor(weatherCursor, kalamazooAltered);
     }
+
 }

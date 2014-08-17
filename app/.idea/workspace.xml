@@ -38,6 +38,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac0d3f4-dcd8-485b-9cd0-87c82f06b5eb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForcastWeatherTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java" afterPath="$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" />
     </list>
@@ -70,44 +72,23 @@
       <file leaf-file-name="ForecastFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="3195">
-              <caret line="53" column="39" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="39" />
-              <folding />
+            <state vertical-scroll-proportion="-12.884615" vertical-offset="1000" max-vertical-offset="1440">
+              <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+              <folding>
+                <element signature="e#1959#2456#0" expanded="true" />
+                <element signature="e#2445#2446#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeatherContract.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherContract.java">
+      <file leaf-file-name="ForcastWeatherTask.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForcastWeatherTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1950">
-              <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeatherProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3000" max-vertical-offset="4215">
-              <caret line="262" column="55" selection-start-line="262" selection-start-column="55" selection-end-line="262" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestProvider.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2930232" vertical-offset="4334" max-vertical-offset="5010">
-              <caret line="326" column="63" selection-start-line="326" selection-start-column="63" selection-end-line="326" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.4828326" vertical-offset="240" max-vertical-offset="2130">
+              <caret line="31" column="5" selection-start-line="22" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1821#1822#0" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#8822#8823#0" expanded="true" />
-                <element signature="e#8856#8857#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -870,15 +851,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java" />
         <option value="$PROJECT_DIR$/src/main/res/menu/forcastfragment.xml" />
         <option value="$PROJECT_DIR$/src/android_test/java/com.laazer.sunshine.app.test/FullTestSuite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherContract.java" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherDbHelper.java" />
         <option value="$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForcastWeatherTask.java" />
       </list>
     </option>
   </component>
@@ -1718,14 +1700,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="975">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_main.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
@@ -1768,7 +1742,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="960">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#1959#2456#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2035,6 +2012,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
           <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2072,14 +2050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1950">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/FullTestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16447368" vertical-offset="0" max-vertical-offset="456">
@@ -2095,26 +2065,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1785">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5394737" vertical-offset="594" max-vertical-offset="1050">
           <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="3240">
-          <caret line="53" column="39" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -2127,24 +2081,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3000" max-vertical-offset="4215">
-          <caret line="262" column="55" selection-start-line="262" selection-start-column="55" selection-end-line="262" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2930232" vertical-offset="4334" max-vertical-offset="5010">
-          <caret line="326" column="63" selection-start-line="326" selection-start-column="63" selection-end-line="326" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.8255814" vertical-offset="4565" max-vertical-offset="5025">
+          <caret line="328" column="4" selection-start-line="328" selection-start-column="4" selection-end-line="328" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1821#1822#0" expanded="true" />
             <element signature="e#1855#1856#0" expanded="true" />
             <element signature="e#8822#8823#0" expanded="true" />
             <element signature="e#8856#8857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9322799" vertical-offset="3742" max-vertical-offset="4605">
+          <caret line="285" column="5" selection-start-line="285" selection-start-column="5" selection-end-line="285" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1950">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/androidTest/java/com.laazer.sunshine.app.test/TestDb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1785">
+          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.884615" vertical-offset="1000" max-vertical-offset="1440">
+          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+          <folding>
+            <element signature="e#1959#2456#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForcastWeatherTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4828326" vertical-offset="240" max-vertical-offset="2130">
+          <caret line="31" column="5" selection-start-line="22" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
