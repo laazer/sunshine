@@ -1,8 +1,12 @@
 package com.laazer.sunshine.app.data;
 
 import android.content.ContentUris;
+import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.BaseColumns;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,7 +17,7 @@ import java.util.Date;
 /**
  * Defines table and column names for the weather database.
  */
-public class WeatherContract {
+public class WeatherContract implements LoaderManager.LoaderCallbacks<Cursor>{
 
     // The "Content authority" is a name for the entire content provider, similar to the
     // relationship between a domain name and its website.  A convenient string to use for the
@@ -151,5 +155,20 @@ public class WeatherContract {
         public static String getStartDateFromUri(Uri uri) {
             return uri.getQueryParameter(COLUMN_DATETEXT);
         }
+    }
+
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+        return null;
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+
     }
 }
