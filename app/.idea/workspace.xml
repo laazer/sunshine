@@ -38,11 +38,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac0d3f4-dcd8-485b-9cd0-87c82f06b5eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/Utility.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForcastWeatherTask.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings_activity_settings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings_activity_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java" />
     </list>
     <ignored path="app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,10 +66,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ForecastFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ForecastFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6106033" vertical-offset="326" max-vertical-offset="1380">
+            <state vertical-scroll-proportion="11.384615" vertical-offset="956" max-vertical-offset="1380">
               <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
               <folding>
                 <element signature="e#1959#2456#0" expanded="true" />
@@ -83,17 +79,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FetchWeatherTask.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FetchWeatherTask.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5" vertical-offset="1897" max-vertical-offset="3690">
-              <caret line="136" column="60" selection-start-line="136" selection-start-column="59" selection-end-line="136" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.33255813" vertical-offset="1342" max-vertical-offset="4815">
+              <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2223#2265#0" expanded="true" />
-                <element signature="e#2283#2329#0" expanded="true" />
-                <element signature="e#2361#2409#0" expanded="true" />
-                <element signature="e#2524#2570#0" expanded="true" />
+                <element signature="e#2477#2519#0" expanded="true" />
+                <element signature="e#2537#2583#0" expanded="true" />
+                <element signature="e#2615#2663#0" expanded="true" />
+                <element signature="e#2778#2824#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -887,10 +883,10 @@
         <option value="$PROJECT_DIR$/src/androidTest/java/com/laazer/sunshine/app/test/TestProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/data/WeatherProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForcastWeatherTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/Utility.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings_activity_settings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java" />
       </list>
     </option>
   </component>
@@ -1321,7 +1317,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="/Library/android-sdk-macosx/tools/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavaCrawler/javacrawler/CrawlerDevLibrary" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="cd1437be" />
@@ -1663,7 +1659,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5010799" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5010799" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15405047" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15405047" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21381143" sideWeight="0.6607431" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1673,7 +1669,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31796876" sideWeight="0.49676025" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32669324" sideWeight="0.58562195" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32669324" sideWeight="0.58562195" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2130,20 +2126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5" vertical-offset="1897" max-vertical-offset="3690">
-          <caret line="136" column="60" selection-start-line="136" selection-start-column="59" selection-end-line="136" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2223#2265#0" expanded="true" />
-            <element signature="e#2283#2329#0" expanded="true" />
-            <element signature="e#2361#2409#0" expanded="true" />
-            <element signature="e#2524#2570#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/strings_activity_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.52" vertical-offset="737" max-vertical-offset="1170">
@@ -2165,11 +2147,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/ForecastFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6106033" vertical-offset="326" max-vertical-offset="1380">
+        <state vertical-scroll-proportion="11.384615" vertical-offset="956" max-vertical-offset="1380">
           <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding>
             <element signature="e#1959#2456#0" expanded="true" />
             <element signature="e#2445#2446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/laazer/sunshine/app/FetchWeatherTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33255813" vertical-offset="1342" max-vertical-offset="4815">
+          <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2477#2519#0" expanded="true" />
+            <element signature="e#2537#2583#0" expanded="true" />
+            <element signature="e#2615#2663#0" expanded="true" />
+            <element signature="e#2778#2824#0" expanded="true" />
           </folding>
         </state>
       </provider>
