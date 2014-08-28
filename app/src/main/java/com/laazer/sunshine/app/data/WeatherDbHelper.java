@@ -1,16 +1,32 @@
+/*
+ * Copyright (C) 2014 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.laazer.sunshine.app.data;
-
-import com.laazer.sunshine.app.data.WeatherContract.WeatherEntry;
-import com.laazer.sunshine.app.data.WeatherContract.LocationEntry;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.laazer.sunshine.app.data.WeatherContract.LocationEntry;
+import com.laazer.sunshine.app.data.WeatherContract.WeatherEntry;
+
 /**
- * Created by jacob on 8/9/14.
+ * Manages a local database for weather data.
  */
 public class WeatherDbHelper extends SQLiteOpenHelper {
+
     // If you change the database schema, you must increment the database version.
     private static final int DATABASE_VERSION = 1;
 
@@ -24,14 +40,14 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         // Create a table to hold locations.  A location consists of the string supplied in the
         // location setting, the city name, and the latitude and longitude
-
         final String SQL_CREATE_LOCATION_TABLE = "CREATE TABLE " + LocationEntry.TABLE_NAME + " (" +
                 LocationEntry._ID + " INTEGER PRIMARY KEY," +
-                LocationEntry.COLUMN_LOCATION_SETTING + " TEXT NOT NULL," +
-                LocationEntry.COLUMN_CITY_NAME + " TEXT NOT NULL," +
-                LocationEntry.COLUMN_COORD_LAT + " REAL NOT NULL," +
-                LocationEntry.COLUMN_COORD_LONG + " REAL NOT NULL," +
-                "UNIQUE (" + LocationEntry.COLUMN_LOCATION_SETTING + ") ON CONFLICT IGNORE);";
+                LocationEntry.COLUMN_LOCATION_SETTING + " TEXT UNIQUE NOT NULL, " +
+                LocationEntry.COLUMN_CITY_NAME + " TEXT NOT NULL, " +
+                LocationEntry.COLUMN_COORD_LAT + " REAL NOT NULL, " +
+                LocationEntry.COLUMN_COORD_LONG + " REAL NOT NULL, " +
+                "UNIQUE (" + LocationEntry.COLUMN_LOCATION_SETTING +") ON CONFLICT IGNORE"+
+                " );";
 
         final String SQL_CREATE_WEATHER_TABLE = "CREATE TABLE " + WeatherEntry.TABLE_NAME + " (" +
                 // Why AutoIncrement here, and not above?
@@ -43,7 +59,7 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
 
                 // the ID of the location entry associated with this weather data
                 WeatherEntry.COLUMN_LOC_KEY + " INTEGER NOT NULL, " +
-                WeatherEntry.COLUMN_DATE_TEXT + " TEXT NOT NULL, " +
+                WeatherEntry.COLUMN_DATETEXT + " TEXT NOT NULL, " +
                 WeatherEntry.COLUMN_SHORT_DESC + " TEXT NOT NULL, " +
                 WeatherEntry.COLUMN_WEATHER_ID + " INTEGER NOT NULL," +
 
@@ -61,7 +77,7 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
 
                 // To assure the application have just one weather entry per day
                 // per location, it's created a UNIQUE constraint with REPLACE strategy
-                " UNIQUE (" + WeatherEntry.COLUMN_DATE_TEXT + ", " +
+                " UNIQUE (" + WeatherEntry.COLUMN_DATETEXT + ", " +
                 WeatherEntry.COLUMN_LOC_KEY + ") ON CONFLICT REPLACE);";
 
         sqLiteDatabase.execSQL(SQL_CREATE_LOCATION_TABLE);
@@ -80,5 +96,4 @@ public class WeatherDbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + WeatherEntry.TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
-
 }

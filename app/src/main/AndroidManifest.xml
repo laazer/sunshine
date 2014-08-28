@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.laazer.sunshine.app" >
 
+    <!-- This permission is necessary in order for Sunshine to perform network access. -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-sdk android:minSdkVersion="11" />
 
     <application
         android:allowBackup="true"
@@ -26,7 +25,7 @@
             android:parentActivityName="com.laazer.sunshine.app.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
+                android:value="com.laazer.sunshine.app.MainActivity" />
         </activity>
         <activity
             android:name="com.laazer.sunshine.app.SettingsActivity"
@@ -34,11 +33,11 @@
             android:parentActivityName="com.laazer.sunshine.app.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
+                android:value="com.laazer.sunshine.app.MainActivity" />
         </activity>
         <provider
-                android:authorities="com.laazer.sunshine.app"
-                android:name=".data.WeatherProvider" />
+            android:authorities="com.laazer.sunshine.app"
+            android:name=".data.WeatherProvider" />
     </application>
 
 </manifest>

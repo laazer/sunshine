@@ -1,20 +1,31 @@
+/*
+ * Copyright (C) 2014 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.laazer.sunshine.app.test;
 
 import android.annotation.TargetApi;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Build;
 import android.test.AndroidTestCase;
 import android.util.Log;
+
 import com.laazer.sunshine.app.data.WeatherContract.LocationEntry;
 import com.laazer.sunshine.app.data.WeatherContract.WeatherEntry;
-import com.laazer.sunshine.app.data.WeatherDbHelper;
-import com.laazer.sunshine.app.test.TestDb;
-import java.util.Map;
-import java.util.Set;
 
 public class TestProvider extends AndroidTestCase {
 
@@ -151,33 +162,33 @@ public class TestProvider extends AndroidTestCase {
     }
 
     public void testGetType() {
-        // content://com.example.android.sunshine.app/weather/
+        // content://com.laazer.sunshine.app/weather/
         String type = mContext.getContentResolver().getType(WeatherEntry.CONTENT_URI);
-        // vnd.android.cursor.dir/com.example.android.sunshine.app/weather
+        // vnd.android.cursor.dir/com.laazer.sunshine.app/weather
         assertEquals(WeatherEntry.CONTENT_TYPE, type);
 
         String testLocation = "94074";
-        // content://com.example.android.sunshine.app/weather/94074
+        // content://com.laazer.sunshine.app/weather/94074
         type = mContext.getContentResolver().getType(
                 WeatherEntry.buildWeatherLocation(testLocation));
-        // vnd.android.cursor.dir/com.example.android.sunshine.app/weather
+        // vnd.android.cursor.dir/com.laazer.sunshine.app/weather
         assertEquals(WeatherEntry.CONTENT_TYPE, type);
 
         String testDate = "20140612";
-        // content://com.example.android.sunshine.app/weather/94074/20140612
+        // content://com.laazer.sunshine.app/weather/94074/20140612
         type = mContext.getContentResolver().getType(
                 WeatherEntry.buildWeatherLocationWithDate(testLocation, testDate));
-        // vnd.android.cursor.item/com.example.android.sunshine.app/weather
+        // vnd.android.cursor.item/com.laazer.sunshine.app/weather
         assertEquals(WeatherEntry.CONTENT_ITEM_TYPE, type);
 
-        // content://com.example.android.sunshine.app/location/
+        // content://com.laazer.sunshine.app/location/
         type = mContext.getContentResolver().getType(LocationEntry.CONTENT_URI);
-        // vnd.android.cursor.dir/com.example.android.sunshine.app/location
+        // vnd.android.cursor.dir/com.laazer.sunshine.app/location
         assertEquals(LocationEntry.CONTENT_TYPE, type);
 
-        // content://com.example.android.sunshine.app/location/1
+        // content://com.laazer.sunshine.app/location/1
         type = mContext.getContentResolver().getType(LocationEntry.buildLocationUri(1L));
-        // vnd.android.cursor.item/com.example.android.sunshine.app/location
+        // vnd.android.cursor.item/com.laazer.sunshine.app/location
         assertEquals(LocationEntry.CONTENT_ITEM_TYPE, type);
     }
 
@@ -238,7 +249,7 @@ public class TestProvider extends AndroidTestCase {
     static ContentValues createKalamazooWeatherValues(long locationRowId) {
         ContentValues weatherValues = new ContentValues();
         weatherValues.put(WeatherEntry.COLUMN_LOC_KEY, locationRowId);
-        weatherValues.put(WeatherEntry.COLUMN_DATE_TEXT, KALAMAZOO_WEATHER_START_DATE);
+        weatherValues.put(WeatherEntry.COLUMN_DATETEXT, KALAMAZOO_WEATHER_START_DATE);
         weatherValues.put(WeatherEntry.COLUMN_DEGREES, 1.2);
         weatherValues.put(WeatherEntry.COLUMN_HUMIDITY, 1.5);
         weatherValues.put(WeatherEntry.COLUMN_PRESSURE, 1.1);
@@ -325,6 +336,7 @@ public class TestProvider extends AndroidTestCase {
         kalamazooAltered.remove(WeatherEntry.COLUMN_HUMIDITY);
 
         TestDb.validateCursor(weatherCursor, kalamazooAltered);
+        int idx = weatherCursor.getColumnIndex(WeatherEntry.COLUMN_HUMIDITY);
+        assertEquals(-1, idx);
     }
-
 }
